@@ -1,4 +1,4 @@
-# 🎭 Playwright Hello World - Professional Testing Demo
+# 🎭 Playwright Hello World - structure Demo
 
 A comprehensive demonstration of professional Playwright testing practices with the **Page Object Model (POM)** pattern. Perfect for teams learning test automation best practices.
 
