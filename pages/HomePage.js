@@ -9,7 +9,7 @@ class HomePage {
 
   async navigate() {
     const pageUrl = pathToFileURL(path.join(__dirname, '..', 'public', 'index.html'));
-    await this.page.goto(pageUrl.href);
+    await this.page.goto(pageUrl.href, { waitUntil: 'networkidle' });
   }
 
   // Header & Title

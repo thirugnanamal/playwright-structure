@@ -160,6 +160,108 @@
         padding-top: 30px;
         border-top: 2px solid #e2e8f0;
       }
+      
+      /* USER PROFILE CARD COMPONENT */
+      .user-profile-card {
+        background: white;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 15px 0;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+      
+      .user-profile-card:hover {
+        border-color: #667eea;
+        box-shadow: 0 6px 16px rgba(102, 126, 234, 0.15);
+        transform: translateY(-2px);
+      }
+      
+      .profile-avatar {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      
+      .avatar-initials {
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      
+      .profile-content {
+        flex: 1;
+      }
+      
+      .profile-name {
+        margin: 0 0 8px 0;
+        color: #333;
+        font-size: 1.1em;
+      }
+      
+      .profile-role {
+        margin: 8px 0;
+        color: #666;
+      }
+      
+      .role-badge {
+        display: inline-block;
+        background: #e0e7ff;
+        color: #667eea;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      
+      .profile-email {
+        margin: 8px 0 0 0;
+        color: #666;
+        font-size: 0.95em;
+      }
+      
+      .profile-actions {
+        display: flex;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+      
+      .btn-view-profile,
+      .btn-edit-profile {
+        padding: 8px 16px;
+        border: 1px solid #667eea;
+        background: white;
+        color: #667eea;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 0.9em;
+      }
+      
+      .btn-view-profile:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-1px);
+      }
+      
+      .btn-edit-profile:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-1px);
+      }
     </style>
   </head>
   <body>
@@ -244,6 +346,50 @@
             <div class="stat-card">
               <div class="number">⚡</div>
               <div class="label">Performance First</div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- User Profile Card Component Example -->
+        <section class="section">
+          <h2>🧩 Reusable Component: User Profile Card</h2>
+          <p>This component is used across all pages to display user information consistently. It's a great example of component reusability in testing.</p>
+          
+          <div class="user-profile-card">
+            <div class="profile-avatar">
+              <span class="avatar-initials">JD</span>
+            </div>
+            <div class="profile-content">
+              <h3 class="profile-name">John Doe</h3>
+              <p class="profile-role">
+                <span class="role-badge">QA Engineer</span>
+              </p>
+              <p class="profile-email">
+                <strong>Email:</strong> john.doe@example.com
+              </p>
+            </div>
+            <div class="profile-actions">
+              <button class="btn-view-profile" data-user="John Doe">View Profile</button>
+              <button class="btn-edit-profile" data-user="John Doe">Edit</button>
+            </div>
+          </div>
+          
+          <div class="user-profile-card">
+            <div class="profile-avatar">
+              <span class="avatar-initials">SJ</span>
+            </div>
+            <div class="profile-content">
+              <h3 class="profile-name">Sarah Johnson</h3>
+              <p class="profile-role">
+                <span class="role-badge">Developer</span>
+              </p>
+              <p class="profile-email">
+                <strong>Email:</strong> sarah.johnson@example.com
+              </p>
+            </div>
+            <div class="profile-actions">
+              <button class="btn-view-profile" data-user="Sarah Johnson">View Profile</button>
+              <button class="btn-edit-profile" data-user="Sarah Johnson">Edit</button>
             </div>
           </div>
         </section>

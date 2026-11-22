@@ -9,7 +9,7 @@ class DashboardPage {
 
   async navigate() {
     const pageUrl = pathToFileURL(path.join(__dirname, '..', 'public', 'dashboard.html'));
-    await this.page.goto(pageUrl.href);
+    await this.page.goto(pageUrl.href, { waitUntil: 'networkidle' });
   }
 
   async navigateTo() {
@@ -22,15 +22,16 @@ class DashboardPage {
   }
 
   async getMainHeading() {
-    return this.page.getByRole('heading', { name: /Dashboard/i });
+    return this.page.locator('header h1');
   }
 
   async expectMainHeadingVisible() {
-    await expect(await this.getMainHeading()).toBeVisible();
+    const heading = await this.getMainHeading();
+    await expect(heading).toBeVisible();
   }
 
   async expectSuccessAlert() {
-    const alert = this.page.locator('.success-alert');
+    const alert = this.page.locator('#successAlert');
     await expect(alert).toBeVisible();
   }
 

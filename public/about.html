@@ -109,6 +109,103 @@
         padding-top: 30px;
         border-top: 2px solid #e2e8f0;
       }
+      
+      /* USER PROFILE CARD COMPONENT */
+      .user-profile-card {
+        background: white;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 15px 0;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+      
+      .user-profile-card:hover {
+        border-color: #667eea;
+        box-shadow: 0 6px 16px rgba(102, 126, 234, 0.15);
+        transform: translateY(-2px);
+      }
+      
+      .profile-avatar {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      
+      .avatar-initials {
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      
+      .profile-content {
+        flex: 1;
+      }
+      
+      .profile-name {
+        margin: 0 0 8px 0;
+        color: #333;
+        font-size: 1.1em;
+      }
+      
+      .profile-role {
+        margin: 8px 0;
+        color: #666;
+      }
+      
+      .role-badge {
+        display: inline-block;
+        background: #e0e7ff;
+        color: #667eea;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      
+      .profile-email {
+        margin: 8px 0 0 0;
+        color: #666;
+        font-size: 0.95em;
+      }
+      
+      .profile-actions {
+        display: flex;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+      
+      .btn-view-profile,
+      .btn-edit-profile {
+        padding: 8px 16px;
+        border: 1px solid #667eea;
+        background: white;
+        color: #667eea;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 0.9em;
+      }
+      
+      .btn-view-profile:hover,
+      .btn-edit-profile:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-1px);
+      }
     </style>
   </head>
   <body>
@@ -230,6 +327,40 @@ playwright-hello-world/
             <li><strong>Use descriptive names:</strong> Test names should clearly describe what they test</li>
             <li><strong>Keep DRY:</strong> Extract common patterns into reusable functions</li>
           </ul>
+        </section>
+        
+        <!-- Component Pattern Section -->
+        <section class="section">
+          <h2>🧩 Reusable Components Pattern</h2>
+          <p>This project demonstrates how components can be tested and reused across multiple pages. The User Profile Card component appears on all three pages (Home, Dashboard, About) with the same styling and behavior.</p>
+          <p><strong>Benefits of component testing:</strong></p>
+          <ul style="margin-left: 20px; color: #666; line-height: 1.8; margin-top: 10px;">
+            <li>Test component in isolation</li>
+            <li>Reuse across multiple pages</li>
+            <li>Consistent user experience</li>
+            <li>Easier maintenance and updates</li>
+            <li>Scalable architecture</li>
+          </ul>
+          
+          <!-- Example User Profile Card -->
+          <div class="user-profile-card">
+            <div class="profile-avatar">
+              <span class="avatar-initials">PW</span>
+            </div>
+            <div class="profile-content">
+              <h3 class="profile-name">Playwright Workshop</h3>
+              <p class="profile-role">
+                <span class="role-badge">Educational Project</span>
+              </p>
+              <p class="profile-email">
+                <strong>Created for:</strong> Teaching Playwright Best Practices
+              </p>
+            </div>
+            <div class="profile-actions">
+              <button class="btn-view-profile" data-user="Playwright Workshop">Learn More</button>
+              <button class="btn-edit-profile" data-user="Playwright Workshop">Documentation</button>
+            </div>
+          </div>
         </section>
         
         <!-- Navigation -->

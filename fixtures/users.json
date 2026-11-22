@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "role": "QA Engineer",
+      "roleValue": "qa",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Sarah Johnson",
+      "email": "sarah.johnson@example.com",
+      "role": "Developer",
+      "roleValue": "dev",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "name": "Alice Brown",
+      "email": "alice.brown@example.com",
+      "role": "QA Lead",
+      "roleValue": "qa",
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "name": "Mark Green",
+      "email": "mark.green@example.com",
+      "role": "Test Automation Engineer",
+      "roleValue": "qa",
+      "isActive": true
+    }
+  ]
+}
