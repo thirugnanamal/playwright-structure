@@ -2,20 +2,9 @@
 
 A comprehensive demonstration of professional Playwright testing practices with the **Page Object Model (POM)** pattern. Perfect for teams learning test automation best practices.
 
-## 🎯 Overview
-
-This project showcases:
-- ✅ **21 Passing Tests** across multiple test types
-- ✅ **Multi-page Application** with forms, navigation, and dynamic content
-- ✅ **Page Object Model** pattern for scalable, maintainable tests
-- ✅ **Three Test Levels**: Components, Pages, and Journey (E2E) tests
-- ✅ **Professional Structure** organized for growth and maintenance
-
-## 📊 Project Statistics
-
 | Metric | Value |
 |--------|-------|
-| **Total Tests** | 21 ✅ |
+| **Total Tests** | 35 ✅ |
 | **Test Pages** | 3 |
 | **Page Objects** | 2 |
 | **Test Suites** | 3 (Pages, Journeys) |
